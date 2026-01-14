@@ -1,8 +1,0 @@
-Your code compiles and runs without errors, and passes all of the tests on my end. You did a good 
-job with documentation, the comments you left throughout your code gave me a better understanding
-of the logic behind your decisions. In terms of readbility, I would say you did a good job,
-but there were a few points of you code you could have factored out a helper function for more
-abstraction, namely for type checking and emitting errors in the postvisit_binaryop function.
-The way you split your checks into pre and post visit parts made it clear when each rule was being 
-applied. You made good use of the UNKNOWN DecafType to prevent cscading or redundant errors, which
-is something I completely missed in my implementation. Overall, great job!
