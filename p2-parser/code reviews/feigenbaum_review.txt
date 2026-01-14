@@ -1,0 +1,13 @@
+Overall, your code is very organized and well documented. The comments you've included within the 
+functions are helpful when skimming through to understand sections of code. Your descriptive error
+messages also allow for easier debugging.
+
+I like how you handled escape characters in your parse_literal() function. This is a problem I 
+was never able to figure out, and my code kept segfaulting because of it. One key difference in our
+implementations was how we handled operator precedence. In my approach, I began with a parse_or() 
+function, which represents the lowest-precedence operators, and had it call successively 
+higher-precedence parsing functions, while you created helpers to set precedence for particular
+operators. I think that while your way of doing it was interesting, it is not the standard or mostly
+reliable way of solving the precedence problem.
+
+All in all, besides a few minor tweaks, your code looks great. Nice work!

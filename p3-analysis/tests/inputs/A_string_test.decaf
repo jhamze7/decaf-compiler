@@ -1,0 +1,11 @@
+def int main() { 
+    int w; void op; bool cmp;
+    op = 2 % 5 / "world";
+    cmp = "hello" == "hello";
+    cmp = "world" == "world";
+    cmp = "NOT" != "equal";
+    cmp = 1 != "str";
+    cmp = "str" >= 1;
+    cmp = 2 + 5 > "a";
+    return "hello" + w;
+}

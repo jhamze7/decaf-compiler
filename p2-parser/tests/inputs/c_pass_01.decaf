@@ -1,0 +1,20 @@
+// arrays, blocks, assignments, returns, locations
+int a;
+bool ok;
+int nums[3];
+
+def int main() {
+    a = 0;
+    nums[0] = 10;
+    nums[1] = nums[0];
+    nums[2] = 5;
+
+    {
+        ok = true;
+        if (ok) {
+            a = nums[0];
+        }
+    }
+
+    return a;
+}

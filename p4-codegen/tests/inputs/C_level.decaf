@@ -1,0 +1,147 @@
+// ===============================================
+// C-LEVEL TESTS (Satisfactory)
+// Tests basic functionality: literals, operators, 
+// variables, assignments, returns, blocks
+// ===============================================
+
+// TEST 1: Basic arithmetic with addition
+def int test_c01()
+{
+    return 5 + 3;
+}
+// Expected: 8
+
+// TEST 2: All binary operators (except modulus)
+def int test_c02()
+{
+    int a;
+    int b;
+    int result;
+    
+    a = 10;
+    b = 3;
+    
+    result = a + b;  // 13
+    result = a - b;  // 7
+    result = a * b;  // 30
+    result = a / b;  // 3
+    
+    return result;
+}
+// Expected: 3
+
+// TEST 3: Unary negation operator
+def int test_c03()
+{
+    int x;
+    int y;
+    
+    x = 5;
+    y = -x;
+    
+    return y;
+}
+// Expected: -5
+
+// TEST 4: Comparison operators returning bool
+def bool test_c04()
+{
+    int a;
+    int b;
+    bool result;
+    
+    a = 10;
+    b = 5;
+    
+    result = a < b;   // false (0)
+    result = a <= b;  // false (0)
+    result = a > b;   // true (1)
+    result = a >= b;  // true (1)
+    result = a == b;  // false (0)
+    result = a != b;  // true (1)
+    
+    return result;
+}
+// Expected: 1
+
+// TEST 5: Scalar variable locations and assignments
+def int test_c05()
+{
+    int x;
+    int y;
+    int z;
+    
+    x = 10;
+    y = 20;
+    z = x;
+    z = z + y;
+    
+    return z;
+}
+// Expected: 30
+
+// TEST 6: Complex expressions
+def int test_c06()
+{
+    int a;
+    int b;
+    int c;
+    int result;
+    
+    a = 5;
+    b = 3;
+    c = 2;
+    
+    result = (a + b) * c - a / b;
+    
+    return result;
+}
+// Expected: 15
+
+// TEST 7: Nested blocks with if statement
+def int test_c07()
+{
+    int x;
+    x = 5;
+    if (x > 0) {
+        int y;
+        y = 10;
+        x = x + y;
+    }
+    return x;
+}
+// Expected: 15
+
+// TEST 8: Multiple functions with returns
+def int compute_c08(int x)
+{
+    int result;
+    result = x * 2;
+    return result;
+}
+
+def int test_c08()
+{
+    int a;
+    a = 7;
+    return a + 3;
+}
+// Expected: 10
+
+// MAIN function to run all C-level tests
+def int main()
+{
+    int result;
+    bool bool_result;
+    
+    result = test_c01();  // Should be 8
+    result = test_c02();  // Should be 3
+    result = test_c03();  // Should be -5
+    bool_result = test_c04();  // Should be true (1)
+    result = test_c05();  // Should be 30
+    result = test_c06();  // Should be 15
+    result = test_c07();  // Should be 15
+    result = test_c08();  // Should be 10
+    
+    return result;
+}

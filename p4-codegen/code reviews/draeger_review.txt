@@ -1,0 +1,12 @@
+Your code compiles and runs on my machine without failure, and is well organized. The
+comments you left were very descriptive and helpful while skimming through your code.
+
+
+I'm a fan of how you abstracted out helper functions for all of the binaryops, it majorly improves 
+the readability of CodeGenVisitor_gen_binaryop function. Our code differs when it comes to hadling 
+while loop logic. My code manually checks whether or not a break or continue appears outside a loop, 
+while your code break and continue nodes can only be visited after the surrounding while loop has 
+been previsited. I believe this to be a far more clever solution, and fixes the problem by the nature
+of the structure your code, not by an explicit statement.
+
+Overall this is a great implementation, good job!

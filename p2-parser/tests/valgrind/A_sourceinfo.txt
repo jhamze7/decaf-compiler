@@ -1,0 +1,25 @@
+==1634814== Memcheck, a memory error detector
+==1634814== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==1634814== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==1634814== Command: ../decaf inputs/add.decaf
+==1634814== 
+Program [line 1]
+  FuncDecl name="main" return_type=int parameters={} [line 1]
+    Block [line 2]
+      VarDecl name="a" type=int is_array=no array_length=1 [line 3]
+      Assignment [line 4]
+        Location name="a" [line 4]
+        Binaryop op="+" [line 4]
+          Literal type=int value=4 [line 4]
+          Literal type=int value=5 [line 4]
+      Return [line 5]
+        Location name="a" [line 5]
+==1634814== 
+==1634814== HEAP SUMMARY:
+==1634814==     in use at exit: 0 bytes in 0 blocks
+==1634814==   total heap usage: 1,779 allocs, 1,779 frees, 205,696 bytes allocated
+==1634814== 
+==1634814== All heap blocks were freed -- no leaks are possible
+==1634814== 
+==1634814== For lists of detected and suppressed errors, rerun with: -s
+==1634814== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

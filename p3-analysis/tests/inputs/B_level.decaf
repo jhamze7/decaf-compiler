@@ -1,0 +1,43 @@
+int g;
+bool flags[4];
+
+def void foo(int x, bool y) {
+    int local;
+    local = x;
+    if (y && (local < 5)) {
+        g = g + 1;
+    }
+    while (local < 10) {
+        local = local + 1;
+        if (local == 8) {
+            break;
+        }
+    }
+    return;
+}
+
+def int bar(bool cond) {
+    int value;
+    value = 0;
+    if (cond) {
+        value = 7;
+    } else {
+        value = 3;
+    }
+    return value;
+}
+
+def int main() {
+    int x;
+    bool ok;
+    x = 2;
+    ok = true;
+
+    foo(x, ok);
+    g = bar(ok);
+
+    flags[0] = false;
+    flags[1] = ok;
+
+    return 0;
+}

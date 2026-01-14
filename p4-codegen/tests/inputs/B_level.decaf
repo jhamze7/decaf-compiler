@@ -1,0 +1,74 @@
+// B_LEVEL tests: boolean expressions, conditionals, while loops, breaks/continues,
+// and function calls without parameters
+
+// TEST B01: Boolean literals and logical operators
+def bool test_b01()
+{
+    bool a;
+    bool b;
+    a = true;
+    b = false;
+    return a && !b || (a || b);
+}
+
+// TEST B02: Conditional with else
+def int test_b02()
+{
+    int x;
+    x = 0;
+    if (true) {
+        x = 5;
+    } else {
+        x = 7;
+    }
+    return x; // expect 5
+}
+
+// TEST B03: While loop with break and continue
+def int test_b03()
+{
+    int i;
+    int sum;
+    i = 0;
+    sum = 0;
+    while (i < 10) {
+        i = i + 1;
+        if (i == 5) {
+            continue; // skip adding 5
+        }
+        if (i == 8) {
+            break; // stop early
+        }
+        sum = sum + i;
+    }
+    return sum;
+}
+
+// TEST B04: Function call without parameters
+def int helper()
+{
+    return 42;
+}
+
+def int test_b04()
+{
+    return helper();
+}
+
+// main: call each test and print the result so the reference compiler can run the program
+def int main()
+{
+    // B01 returns a bool; print_bool prints 1/0
+    print_bool(test_b01());
+
+    // B02 returns an int
+    print_int(test_b02());
+
+    // B03 returns an int
+    print_int(test_b03());
+
+    // B04 returns an int
+    print_int(test_b04());
+
+    return 0;
+}

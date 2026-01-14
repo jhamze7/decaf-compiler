@@ -1,0 +1,7 @@
+//Comment starting at the beginning of a line
+def int main()
+{
+	int iftrue; //Comment after a piece of code
+	iftrue = 4 + 5;
+	return iftrue;
+}

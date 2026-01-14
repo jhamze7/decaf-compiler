@@ -1,0 +1,5 @@
+Running suite(s): Default
+90%: Checks: 30, Failures: 0, Errors: 3
+public.c:80:E:Public:C_strlit:0: (after this point) Received signal 11 (Segmentation fault)
+public.c:81:E:Public:A_newline:0: (after this point) Received signal 11 (Segmentation fault)
+private.c:5:E:Private:A_null_token_queue:0: (after this point) Received signal 11 (Segmentation fault)

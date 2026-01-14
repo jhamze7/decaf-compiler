@@ -1,0 +1,46 @@
+# =====================
+# Build artifacts
+# =====================
+obj/
+**/obj/
+*.o
+*.a
+*.so
+*.d
+*.out
+*.bin
+a.out
+
+# =====================
+# Generated docs
+# =====================
+docs/
+doc/
+html/
+latex/
+
+# =====================
+# Generated graphs / trees
+# =====================
+*.dot
+*.png
+*.svg
+
+# =====================
+# Test outputs
+# =====================
+*.log
+*.tmp
+*.diff
+*.result
+
+# =====================
+# Editor / OS files
+# =====================
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+code reviews/

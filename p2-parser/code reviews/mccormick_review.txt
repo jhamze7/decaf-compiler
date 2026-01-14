@@ -1,0 +1,12 @@
+Your code seems to be mostly correct. You did an excellent job with comments in
+your code, which was very helpful while skimming through it. 
+
+One of the biggest issues in the code is that it does not properly handle precedence.
+You handle all binary ops in a single if statement, which produces the wrong output 
+for expressions like "a - b * c". This could have been fixed by creating a function for every 
+binary operator, and calling the function for the next operator in order of precedence. 
+There was also a small issue in your parse_stmt() function. When parsing a function call, you 
+forget to match and discard the ";" character, making something simple like "foo()" fail.
+
+Overall, you have a very good frame for the parser, and if these issues are changed, it would
+be in good shape. Nice work!

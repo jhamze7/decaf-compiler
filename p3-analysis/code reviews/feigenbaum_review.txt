@@ -1,0 +1,8 @@
+Your code compiles and runs without errors, and passes all of the tests on my end. The 
+comments you left throughout you code are very descriptive, and were useful when it came to skimming
+through it initially. There is very little to critique in your code, except for some tiny flaws. 
+Variables named "main" should be rejected, as every program must already have a function named "main".
+Another small issue is that you dont check that all control paths return a value in a non void function.
+For instance, if you had a function that had "if x == 3 return true", there is no return value for
+the case where x != 3. One of the strongpoints of your code is your error handling. I really like 
+your use of the "UNKNOWN" DecafType to prevent redundant errors. Great job!

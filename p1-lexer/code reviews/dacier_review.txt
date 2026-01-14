@@ -1,0 +1,16 @@
+Overall, you seem to cover most bases when it comes to the correctness of your code, and most of my critique
+is about minor issues. I like how you defined helper functions to check if an identifier is a 
+keyword or if it is reserved, I took the same approach. As for your hex regex, the specs say you
+can have both capital and lowercase letter digits, and your implementation only accounts for lowercase.
+Also, you cannot have any zero-padding after the "0x". This could be fixed by only allowing 1-9 or a-z for the
+first digit.
+
+I like how clear you were with comments about how you used AI to solve a particular problem.
+Aside from just that, you were consistent with your documentation, desribing parts of your
+code that may not be immediately clear. 
+
+I was a little confused on why you made separate regexs for 2 character symbols vs 1 character symbols.
+Regex* symbol = Regex_new("^(<=|>=|==|!=|&&|\\|\\|"
+"|\\(|\\)|\\{|\\}|\\[|\\]|,|;|=|\\+|-|\\*|/|%|<|>|!)");
+This was my regex for symbols, and it was sufficient for consuming 2 character and 1 character symbols.
+Besides these minor issues, your code seems to do exactly what its supposed to do. Nice work!

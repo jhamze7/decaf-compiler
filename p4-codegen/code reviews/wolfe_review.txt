@@ -1,0 +1,11 @@
+Your code compiles and runs on my machine without failure, and is well organized. While the comments
+you did leave were helpful, it could have done with a few more. 
+
+One of the most obvious issues with your code is the handling of breaks and continues.
+For both of these, you emit JUMP directly to DATA->current_loop_exit and DATA->current_loop_start
+without checking if they're empty. When running your code on my B level tests, I get this:
+"ERROR: Invalid instruction (expected 1 operands but found 0): jump EMPTY". Also, 
+CodeGenVisitor_gen_BinaryOP does not contain a case for MODOP, which causes my modulo tests to fail.
+Last thing, you have elem_size set to 4, which causes array access at the wrong locations.
+
+Besides these issues, this is an otherwise solid implementation. Good work!

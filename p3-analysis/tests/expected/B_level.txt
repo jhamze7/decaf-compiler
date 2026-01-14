@@ -1,0 +1,51 @@
+Program [line 1]
+SYM TABLE:
+ print_int : (int) -> void
+ print_bool : (bool) -> void
+ print_str : (str) -> void
+ foo : (int, bool) -> void
+ bar : (bool) -> int
+ main : () -> int
+ g : int
+ flags : bool [4]
+
+  FuncDecl name="foo" return_type=void parameters={x:int,y:bool} [line 4]
+  SYM TABLE:
+   x : int
+   y : bool
+
+    Block [line 4]
+    SYM TABLE:
+     local : int
+
+        Block [line 7]
+        SYM TABLE:
+
+        Block [line 10]
+        SYM TABLE:
+
+            Block [line 12]
+            SYM TABLE:
+
+  FuncDecl name="bar" return_type=int parameters={cond:bool} [line 19]
+  SYM TABLE:
+   cond : bool
+
+    Block [line 19]
+    SYM TABLE:
+     value : int
+
+        Block [line 22]
+        SYM TABLE:
+
+        Block [line 24]
+        SYM TABLE:
+
+  FuncDecl name="main" return_type=int parameters={} [line 30]
+  SYM TABLE:
+
+    Block [line 30]
+    SYM TABLE:
+     x : int
+     ok : bool
+

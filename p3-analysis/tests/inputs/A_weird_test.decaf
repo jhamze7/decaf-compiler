@@ -1,0 +1,9 @@
+def int foo(bool foo) {
+    int foo;
+    foo = 0;
+    return foo;
+}
+
+def int main() {
+    return foo(false);
+}

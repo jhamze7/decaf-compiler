@@ -1,0 +1,245 @@
+test_c01:
+  push BP
+  i2i SP => BP
+  addI SP, 0 => SP
+  loadI 5 => r0
+  loadI 3 => r1
+  add r0, r1 => r2
+  i2i r2 => RET
+  jump l0
+l0:
+  i2i BP => SP
+  pop BP
+  return
+test_c02:
+  push BP
+  i2i SP => BP
+  addI SP, -24 => SP
+  loadI 10 => r3
+  storeAI r3 => [BP-8]
+  loadI 3 => r4
+  storeAI r4 => [BP-16]
+  loadAI [BP-8] => r5
+  loadAI [BP-16] => r6
+  add r5, r6 => r7
+  storeAI r7 => [BP-24]
+  loadAI [BP-8] => r8
+  loadAI [BP-16] => r9
+  sub r8, r9 => r10
+  storeAI r10 => [BP-24]
+  loadAI [BP-8] => r11
+  loadAI [BP-16] => r12
+  mult r11, r12 => r13
+  storeAI r13 => [BP-24]
+  loadAI [BP-8] => r14
+  loadAI [BP-16] => r15
+  div r14, r15 => r16
+  storeAI r16 => [BP-24]
+  loadAI [BP-24] => r17
+  i2i r17 => RET
+  jump l1
+l1:
+  i2i BP => SP
+  pop BP
+  return
+test_c03:
+  push BP
+  i2i SP => BP
+  addI SP, -16 => SP
+  loadI 5 => r18
+  storeAI r18 => [BP-8]
+  loadAI [BP-8] => r19
+  neg r19 => r20
+  storeAI r20 => [BP-16]
+  loadAI [BP-16] => r21
+  i2i r21 => RET
+  jump l2
+l2:
+  i2i BP => SP
+  pop BP
+  return
+test_c04:
+  push BP
+  i2i SP => BP
+  addI SP, -24 => SP
+  loadI 10 => r22
+  storeAI r22 => [BP-8]
+  loadI 5 => r23
+  storeAI r23 => [BP-16]
+  loadAI [BP-8] => r24
+  loadAI [BP-16] => r25
+  cmp_LT r24, r25 => r26
+  storeAI r26 => [BP-24]
+  loadAI [BP-8] => r27
+  loadAI [BP-16] => r28
+  cmp_LE r27, r28 => r29
+  storeAI r29 => [BP-24]
+  loadAI [BP-8] => r30
+  loadAI [BP-16] => r31
+  cmp_GT r30, r31 => r32
+  storeAI r32 => [BP-24]
+  loadAI [BP-8] => r33
+  loadAI [BP-16] => r34
+  cmp_GE r33, r34 => r35
+  storeAI r35 => [BP-24]
+  loadAI [BP-8] => r36
+  loadAI [BP-16] => r37
+  cmp_EQ r36, r37 => r38
+  storeAI r38 => [BP-24]
+  loadAI [BP-8] => r39
+  loadAI [BP-16] => r40
+  cmp_NE r39, r40 => r41
+  storeAI r41 => [BP-24]
+  loadAI [BP-24] => r42
+  i2i r42 => RET
+  jump l3
+l3:
+  i2i BP => SP
+  pop BP
+  return
+test_c05:
+  push BP
+  i2i SP => BP
+  addI SP, -24 => SP
+  loadI 10 => r43
+  storeAI r43 => [BP-8]
+  loadI 20 => r44
+  storeAI r44 => [BP-16]
+  loadAI [BP-8] => r45
+  storeAI r45 => [BP-24]
+  loadAI [BP-24] => r46
+  loadAI [BP-16] => r47
+  add r46, r47 => r48
+  storeAI r48 => [BP-24]
+  loadAI [BP-24] => r49
+  i2i r49 => RET
+  jump l4
+l4:
+  i2i BP => SP
+  pop BP
+  return
+test_c06:
+  push BP
+  i2i SP => BP
+  addI SP, -32 => SP
+  loadI 5 => r50
+  storeAI r50 => [BP-8]
+  loadI 3 => r51
+  storeAI r51 => [BP-16]
+  loadI 2 => r52
+  storeAI r52 => [BP-24]
+  loadAI [BP-8] => r53
+  loadAI [BP-16] => r54
+  add r53, r54 => r55
+  loadAI [BP-24] => r56
+  mult r55, r56 => r57
+  loadAI [BP-8] => r58
+  loadAI [BP-16] => r59
+  div r58, r59 => r60
+  sub r57, r60 => r61
+  storeAI r61 => [BP-32]
+  loadAI [BP-32] => r62
+  i2i r62 => RET
+  jump l5
+l5:
+  i2i BP => SP
+  pop BP
+  return
+test_c07:
+  push BP
+  i2i SP => BP
+  addI SP, -16 => SP
+  loadI 5 => r63
+  storeAI r63 => [BP-8]
+  loadAI [BP-8] => r64
+  loadI 0 => r65
+  cmp_GT r64, r65 => r66
+  cbr r66 => l7, l8
+l7:
+  loadI 10 => r67
+  storeAI r67 => [BP-16]
+  loadAI [BP-8] => r68
+  loadAI [BP-16] => r69
+  add r68, r69 => r70
+  storeAI r70 => [BP-8]
+l8:
+  loadAI [BP-8] => r71
+  i2i r71 => RET
+  jump l6
+l6:
+  i2i BP => SP
+  pop BP
+  return
+compute_c08:
+  push BP
+  i2i SP => BP
+  addI SP, -8 => SP
+  loadAI [BP+16] => r72
+  loadI 2 => r73
+  mult r72, r73 => r74
+  storeAI r74 => [BP-8]
+  loadAI [BP-8] => r75
+  i2i r75 => RET
+  jump l9
+l9:
+  i2i BP => SP
+  pop BP
+  return
+test_c08:
+  push BP
+  i2i SP => BP
+  addI SP, -8 => SP
+  loadI 7 => r76
+  storeAI r76 => [BP-8]
+  loadAI [BP-8] => r77
+  loadI 3 => r78
+  add r77, r78 => r79
+  i2i r79 => RET
+  jump l10
+l10:
+  i2i BP => SP
+  pop BP
+  return
+main:
+  push BP
+  i2i SP => BP
+  addI SP, -16 => SP
+  call test_c01
+  addI SP, 0 => SP
+  i2i RET => r80
+  storeAI r80 => [BP-8]
+  call test_c02
+  addI SP, 0 => SP
+  i2i RET => r81
+  storeAI r81 => [BP-8]
+  call test_c03
+  addI SP, 0 => SP
+  i2i RET => r82
+  storeAI r82 => [BP-8]
+  call test_c04
+  addI SP, 0 => SP
+  i2i RET => r83
+  storeAI r83 => [BP-16]
+  call test_c05
+  addI SP, 0 => SP
+  i2i RET => r84
+  storeAI r84 => [BP-8]
+  call test_c06
+  addI SP, 0 => SP
+  i2i RET => r85
+  storeAI r85 => [BP-8]
+  call test_c07
+  addI SP, 0 => SP
+  i2i RET => r86
+  storeAI r86 => [BP-8]
+  call test_c08
+  addI SP, 0 => SP
+  i2i RET => r87
+  storeAI r87 => [BP-8]
+  loadAI [BP-8] => r88
+  i2i r88 => RET
+  jump l11
+l11:
+  i2i BP => SP
+  pop BP
+  return

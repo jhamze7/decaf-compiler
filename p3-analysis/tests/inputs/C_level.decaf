@@ -1,0 +1,28 @@
+int nums[5];
+
+def int main() {
+    int x;
+    bool flag;
+
+    x = 10;
+    flag = true;
+    nums[0] = x;
+
+    while (flag) {
+        if (nums[0] > 5) {
+            break;
+        } else {
+            continue;
+        }
+    }
+
+    return 0;
+}
+
+def void printFlag(bool f) {
+    if (f) {
+        return;
+    } else {
+        return;
+    }
+}

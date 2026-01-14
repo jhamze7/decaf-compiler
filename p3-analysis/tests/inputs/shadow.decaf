@@ -1,0 +1,15 @@
+def int main()
+{
+    int x;
+    x = 5;
+
+    if (true) {
+        int x;          // inner x shadows outer x
+        x = 10;
+        print_int(x);   // expected output: 10
+    }
+
+    print_int(x);       // expected output: 5
+
+    return 0;
+}

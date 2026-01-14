@@ -1,0 +1,10 @@
+Void variable 'op' on line 2
+Type mismatch: int expected but str found on line 3
+Type mismatch: void is incompatible with int on line 3
+Unsupported string equality check on line 4
+Unsupported string equality check on line 5
+Unsupported string equality check on line 6
+Type mismatch: int is incompatible with str on line 7
+Type mismatch: int expected but str found on line 8
+Type mismatch: int expected but str found on line 9
+Type mismatch: int expected but str found on line 10

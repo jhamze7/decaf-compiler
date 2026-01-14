@@ -1,0 +1,53 @@
+// A_LEVEL tests: arrays, function calls with parameters, modulus operator, and print functions
+// NOTE: arrays must be declared at global scope in Decaf
+int arr[5];
+
+// TEST A01: Array assignment and access
+// create an array, store values, compute a value using indices
+
+def int test_a01()
+{
+    int i;
+    arr[0] = 10;
+    arr[1] = 3;
+    i = 1;
+    arr[i+1] = arr[0] + arr[1];
+    return arr[2]; // expect 13
+}
+
+// TEST A02: Function with parameters and return
+
+def int sum(int a, int b)
+{
+    return a + b;
+}
+
+def int test_a02()
+{
+    return sum(7, 8); // expect 15
+}
+
+// TEST A03: Modulus operator and print
+
+def int test_a03()
+{
+    int a;
+    a = 17 % 5; // expect 2
+    print_int(a);
+    return a;
+}
+
+// main: call A-level tests and print results
+def int main()
+{
+    // A01 returns int
+    print_int(test_a01());
+
+    // A02 returns int
+    print_int(test_a02());
+
+    // A03 returns int and prints inside
+    print_int(test_a03());
+
+    return 0;
+}

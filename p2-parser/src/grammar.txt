@@ -1,0 +1,40 @@
+Program     → ( VarDecl | FuncDecl )*
+
+VarDecl     → Type ID ( '[' DEC ']' )? ';'
+
+Type        → int | bool | void
+
+FuncDecl    → def Type ID '(' Params? ')' Block
+
+Params      → Type ID ( ',' Type ID )*
+
+Block       → '{' VarDecl* Stmt* '}'
+
+Stmt        → Loc '=' Expr ';'
+            | FuncCall ';'
+            | if '(' Expr ')' Block ( else Block )?
+            | while '(' Expr ')' Block
+            | return Expr? ';'
+            | break ';'
+            | continue ';'
+
+Expr        → BinExpr
+
+BinExpr     → BinExpr BINOP BinExpr
+            | UnaryExpr
+
+UnaryExpr   → UNOP BaseExpr
+            | BaseExpr
+
+BaseExpr    → '(' Expr ')'
+            | Loc
+            | FuncCall
+            | Lit
+
+Loc         → ID ( '[' Expr ']' )?
+
+FuncCall    → ID '(' Args? ')'
+
+Args        → Expr ( ',' Expr )*
+
+Lit         → DEC | HEX | STR | true | false

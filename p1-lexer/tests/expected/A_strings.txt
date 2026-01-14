@@ -1,0 +1,6 @@
+STRLIT   [line 001]  ""
+STRLIT   [line 002]  "hello"
+STRLIT   [line 003]  "a\tb"
+STRLIT   [line 004]  "line\nend"
+STRLIT   [line 005]  "\"inside\""
+STRLIT   [line 006]  "\\path\\"

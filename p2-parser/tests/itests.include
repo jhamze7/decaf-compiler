@@ -1,0 +1,11 @@
+# list of integration tests
+#  format: run_test <TAG> <ARGS>
+#    <TAG>      used as the root for all filenames (i.e., "expected/$TAG.txt")
+#    <ARGS>     command-line arguments to test
+
+run_test    A_sourceinfo                "inputs/add.decaf"
+run_test    c_pass_01                   "inputs/c_pass_01.decaf"
+run_test    c_break_and_continue        "inputs/c_break_and_continue.decaf"
+run_test    b_pass_01                   "inputs/b_pass_01.decaf"
+
+
